@@ -1,0 +1,28 @@
+.hero-img{
+	background: url(../img/events_bg.jpg);
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#events{
+	margin: 2rem auto 15rem;
+}
+.card{
+	background-color: white;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+	margin: 2rem auto;
+	padding: 1rem 0 3rem;
+	border-radius: 10px;
+}
+.event-content{
+	text-align: center;
+	width: 95%;
+	max-width: 600px;
+	margin: 0 auto ;
+}
+.event-content h6{
+	margin: 0.5rem 0 1rem;
+}
+p{
+	margin: 0.25rem 0 0.5rem;
+}

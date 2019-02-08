@@ -1,0 +1,567 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,700,900');
+
+/**** Global ****/
+body, html {
+    height: 100%;
+    margin: 0;
+
+}
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    outline: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+}
+h1{
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 4.5rem;
+}
+h2{
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 0;
+    line-height: 3.75rem;
+}
+h3{
+    font-size: 3.25rem;
+    font-weight: 500;
+    margin-top: 0;
+}
+h4{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 0;
+}
+h5{
+    font-size: 1.75rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+h6{
+    font-size: 1rem;
+    font-weight: 200;
+    margin-top: 0;
+}
+p{
+    font-size: 1.25rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+ul, li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container-fluid{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.container{
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.call-to-action{
+    display: inline-block;
+    background: black;
+    margin: 0.5rem 0;
+    padding: 1rem 3rem;
+    border-radius: 1px;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 200ms ease-in-out;
+}
+.call-to-action:hover{
+    background: #0d00a0;
+}
+
+/**** hamburger icon ****/
+.hamburger{
+    position: fixed;
+    z-index: 999;
+    color: white;
+    right: 5vw;
+    line-height: 60px;
+}
+.hamburger:hover{
+    cursor: pointer;
+}
+.hamburger .close{
+    display: none;
+}
+.hamburger span{
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.hamburger >* {
+    padding-right: 0.15rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+/**** menu ****/
+.menu{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background: black;
+    padding: 2rem 0;
+    color: white;
+    transition: all 400ms cubic-bezier( 0, 0.5, 0, 1);
+    z-index: 998;
+}
+.menu h4{
+    font-size: 1.5rem;
+}
+.menu .row{
+    margin: 6rem auto 3rem;
+}
+.menu li{
+    padding: 0.5rem 0;
+}
+.menu li a{
+    padding: 2rem 0;
+    font-size: 3rem;
+    font-weight: 500;
+    color: white;
+}
+.menu li a:hover{
+    color: #0d00a0;
+}
+.get-quote{
+    position: relative;
+    top: 5vw;
+    text-align: center;
+}
+.get-quote .call-to-action{
+    background: white;
+    color: black;
+}
+.get-quote .call-to-action:hover{
+    background: #0d00a0;
+    color: white;
+}
+.menu .social{
+    position: absolute;
+    bottom: 2rem;
+    right: 3rem;
+}
+.menu .social .icon-wrapper{
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+    background: white;
+    margin: 0 0.5rem 0.75rem 0;
+    transition: all 100ms ease-in-out;
+}
+.social .icon-wrapper:hover{ /**global**/
+    background: #0d00a0;
+}
+
+.menu .social .icon-wrapper img{
+    padding: 0.65rem;
+    height: 100%;
+
+}
+
+.hidden{
+    transform: translateY(-160%);
+}
+
+/**** header****/
+header{
+    position: relative;
+    color: white;
+    height: 100vh;
+}
+nav{
+    height: 60px;
+    line-height: 60px;
+    position: absolute;
+    width: 100%;
+}
+nav a{
+    padding-left: 1rem;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+header .bg{
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: anim 600ms ease-in-out;
+}
+@keyframes anim{
+  0%{
+    opacity: 0.3;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+header .bg-one{
+    background-image: url("../img/bg3.gif");
+}
+header .bg-two{
+    background-image: url("../img/bg.gif");
+}
+header .bg-three{
+    background-image: url("../img/bg1.gif");
+}
+header .container{
+    padding: 10rem 0;
+    
+}
+header .container h1{
+    padding: 1.75rem 0 1rem;
+    line-height: 4.5rem;
+}
+header .call-to-action{
+    margin-top: 1.25rem;
+}
+
+/**** what we do****/
+#cap{
+    margin: 6rem 0 8rem;
+}
+#cap h2{
+    padding: 1.25rem 0;
+    line-height: 4rem;
+}
+#cap p{
+    margin-bottom: 2rem;
+}
+#cap{
+  overflow: hidden;
+}
+#cap img{
+    height: 100%;
+    margin-left: 20%;
+    position: relative;
+    z-index: -1;
+}
+
+/**** clients****/
+#clients{
+    padding: 3rem 0;
+    text-align: center;
+}
+#clients .row img{
+    height: 10vh;
+    filter: saturate(0%);
+}
+#clients img:hover{
+    filter: saturate(100%);
+}
+
+/**** testimonials****/
+#testimonial{
+    padding: 3rem 0;
+}
+#testimocoding-liquidsnial h5{
+    padding: 1rem 0;
+    font-weight: 400;
+}
+
+/**** contact ****/
+#contact{
+  margin: 5rem 0;
+    text-align: center;
+}
+
+/**** footer ****/
+footer{
+    padding: 3rem 0;
+    background: black;
+    color: white;
+}
+footer .col-3{
+    padding: 0 1rem;
+}
+footer li a{
+    color: white;
+}
+footer .social{
+    padding: 1.5rem 0;
+
+}
+
+footer .social .icon-wrapper{
+    display: inline-block;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 100%;
+    background: white;
+    margin: 0 0.5rem 0.75rem 0;
+    transition: all 100ms ease-in-out;
+}
+footer .icon-wrapper img{
+    padding: 0.65rem;
+    height: 100%;
+}
+
+
+/**** GetQuote Page Styles ****/
+.hero-img {
+      background-image: url(../img/quoteHero.jpg);
+      padding: 35vh 0;
+      color: white;
+      background-position: 50% 60%;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+#contact form label {
+display: block;
+font-size: 1.25rem;
+font-weight: 500;
+}
+#contact form input{
+  width: 100%;
+  padding: 0.6rem 0.25rem 0.4rem;
+  box-shadow: 0px 1px black;
+  transition: all 200ms ease-in-out;
+}
+#contact form textarea{
+  width: calc(100% - 0.5rem);
+  padding: 0.6rem 0.25rem 0.4rem;
+  box-shadow: 0px 1px black;
+  transition: all 200ms ease-in-out;
+}
+#contact form input:focus{
+  box-shadow: 0px 2px #0d00a0, 0px 2px rgba(13, 0 , 160, 0.6);
+}
+#contact form textarea:focus{
+  box-shadow: 0px 2px #0d00a0, 0px 2px rgba(13, 0 , 160, 0.6);
+}
+#contact .row{
+  padding: 0.25rem 0;
+}
+#contact .col-2{
+  padding: 0 0.25rem;
+}
+#contact .dropdown select{
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding: 0.35rem 0;
+}
+
+#contact .form-element{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 3px;
+  text-align: left;
+}
+#contact .budget-range label{
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+#contact .form-element h5{
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0.15rem 0;
+}
+#contact #submit{
+  margin: 0.5rem auto;
+  padding: 1rem 3rem;
+  background: black;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  width: 15rem;
+  box-shadow: none;
+  transition: all 200ms ease-in-out;
+}
+#contact #submit:hover{
+  background: #0d00a0;
+  cursor: pointer;
+}
+/**** GetQuote Page Styles End ****/
+
+/**** Team Page Styles***/
+.hero-img-team {
+      background-image: url(../img/team.jpg);
+      padding: 35vh 0;
+      color: white;
+      background-position: 15% center;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
+#team .group-pic img{
+  width: 100%;
+}
+#team .members {
+  margin: -20vh 0 5rem;
+}
+#team .members .col-3{
+  padding: 2rem;
+}
+#team .members img{
+  width: 100%;
+}
+#team .members h5{
+  font-weight: 500;
+}
+
+
+/**** Team Page Styles End***/
+
+/**** coming soon Page Styles***/
+#coming-soon {
+    margin: 20vh auto;
+  width: 80%;
+  max-width: 900px;
+}
+
+/**** events Page Styles***/
+#events{
+    padding-top: 1.5rem;
+}
+#events h2{
+    font-size: 3.5rem;
+}
+#events h3{
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+}
+#events p{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 0;
+}
+.highlight{
+    border-bottom: 5px solid blue;
+    line-height: 2.5rem;
+}
+/**** events Page Styles***/
+
+
+/**** responsive ****/
+@media (max-width: 800px){
+
+    header .container h1{
+        font-size: 4rem;
+        line-height: 3.75rem;
+    }
+    #cap{
+        margin: 3rem 0;
+    }
+    #cap h2{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+    #team .members{
+      margin-top: 3rem;
+    }
+    #team .members .col-3{
+      padding: 2rem 0.5rem;
+    }
+    #team .members h5{
+      font-size: 1.25rem;
+      line-height: 1.25rem;
+    }
+    #events h2{
+        font-size: 2.5rem;
+    }
+    #events h3{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    #events p{
+        font-size: 1.1rem;
+        font-weight: 300;
+        margin-top: 0;
+    }
+    .highlight{
+        border-bottom: 5px solid blue;
+        line-height: 2.5rem;
+    }
+}
+
+
+@media (max-width: 600px){
+
+    .call-to-action{
+        margin: 0.5rem 0;
+        padding: 0.75rem 1.5rem;
+        border-radius: 1px;
+        font-size: 1.25rem;
+    }
+    .menu .row{
+        margin-top: 3rem;
+    }
+    .menu h4{
+        display: none;
+    }
+    .menu li a{
+        font-size: 2rem;
+    }
+    .menu .social .icon-wrapper{
+        display: none;
+    }
+    header .container{
+        padding: 8rem 0;
+    }
+    #cap h2{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    #cap{
+      margin-top: 6rem;
+    }
+    #cap img{
+        display: none;
+    }
+    .hero-img h2{
+      font-size: 2.25rem;
+      line-height: 2.5rem;
+    }
+    #events h2{
+        font-size: 1.2rem;
+
+    }
+    #events h3{
+        font-size: 1.1rem;
+    }
+    #events p{
+        font-size: 1.1rem;
+        font-weight: 300;
+        margin-top: 0;
+    }
+    .highlight{
+        border-bottom: 5px solid blue;
+        line-height: 2.5rem;
+    }
+}
+.g-recaptcha{
+    display: block;
+    margin: auto;
+}
