@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>Coding_Liquids</display-name>
+
+<servlet>
+  <servlet-name>PhpJavaServlet</servlet-name>
+  <servlet-class>
+    php.java.servlet.PhpJavaServlet
+  </servlet-class>
+</servlet>
+
+<servlet>
+  <servlet-name>PhpCGIServlet</servlet-name>
+  <servlet-class>
+    php.java.servlet.PhpCGIServlet
+  </servlet-class>
+  <init-param>
+<param-name>prefer_system_php_exec</param-name>
+<param-value>On</param-value>
+  </init-param>
+  <init-param>
+<param-name>php_include_java</param-name>
+<param-value>On</param-value>
+  </init-param>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>PhpJavaServlet</servlet-name>
+  <url-pattern>*.phpjavabridge</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+  <servlet-name>PhpCGIServlet</servlet-name>
+  <url-pattern>*.php</url-pattern>
+</servlet-mapping>
+</web-app>

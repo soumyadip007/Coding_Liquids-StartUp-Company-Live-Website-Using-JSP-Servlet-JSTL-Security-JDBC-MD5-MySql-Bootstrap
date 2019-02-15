@@ -72,7 +72,7 @@
 
 
     <section id="events">
-        <div class="container">
+        <div class="c-ontainer">
             <div class="card">
             <div class="event-content">
               <h4>Cyber Awareness Programme</h4>
