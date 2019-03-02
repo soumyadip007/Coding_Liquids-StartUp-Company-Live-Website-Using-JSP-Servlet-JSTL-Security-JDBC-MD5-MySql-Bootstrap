@@ -36,7 +36,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="AdminHome.jsp">matchmaker.lightningspeeddating.com</a>
+      <a class="navbar-brand mr-1" href="AdminHome.jsp">CodingLiquids.com</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -164,24 +164,33 @@
 	<td><br><input type="text" name="name"  class="form-control" required="" placeholder="Enter Event name"></td>
 	</tr>
 	<tr>
-	<td><br><dt class="col-sm-3">Event start date:</dt></td>
-	<td><br><input type="text" name="sub" required="" class="form-control"  id="demo" placeholder="Enter subject"></td>
+	<td><br><dt class="col-sm-3">Start date:</dt></td>
+	<td><br><input type="date" name="sdate" required="" class="form-control" placeholder="Enter start date"></td>
 	</tr>
 	
 	<tr>
 	
-	<td><br><br><dt class="col-sm-3">Messege:</dt></td>
-	<td><br><textarea rows="12" cols="150" name="mess" class="form-control" id="email"  required="" placeholder="Type your text here"></textarea><br></td>
+	<td><br><br><dt class="col-sm-3">End date:</dt></td>
+	<td><br><input type="date" name="edate" required="" class="form-control" placeholder="Enter end date"></td>
+	</tr>
+	
+	
+	<tr>
+	
+	<td><br><br><dt class="col-sm-3">Venue:</dt></td>
+	<td><br><input type="text" name="edate" required="" class="form-control" placeholder="Enter venue"></td>
+	</tr>
+	
+	<tr>
+	
+	<td><br><br><dt class="col-sm-3">Description:</dt></td>
+	<td><br><textarea rows="12" cols="150" name="des" class="form-control" id=  required="" placeholder="Enter description"></textarea><br></td>
 	</tr>
 	<tr>
 	<td colspan="2" align="center"><input class="btn btn-primary btn-lg" type="submit" value="Send"></td>
 	
 	</tr>
 	
-	<tr>
-	
-	<td input colspan="2" align="center" ><br><input type="reset" class="btn btn-secondary btn-lg" value="Reset"></td>
-	</tr>
 	</table>
 	</form>
 </div>
