@@ -1,5 +1,10 @@
 
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+<%@page import="java.util.Base64" import="java.io.UnsupportedEncodingException" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,91 +70,71 @@
 
       </div>
     </div>
-
+    
+             
+<%! String profile;
+	int id;%>
+	<%profile=(String)request.getAttribute("id");
+	out.println(profile);
+	%>
+          <sql:setDataSource
+	        var="con"
+	        driver="com.mysql.jdbc.Driver"
+	       url="jdbc:mysql://localhost:3306/cl"
+	        user="root" password=""  /> 
+	    
+	
+	     
+	    <sql:query var="listUsers"   dataSource="${con}">
+	        SELECT * FROM event where id='<%=profile %>';
+	    </sql:query>
+	        <sql:query var="listUsers"   dataSource="${con}">
+	        SELECT * FROM event where id='<%=profile %>';
+	    </sql:query>
+	         <c:forEach var="user"
+                     items="${listUsers.rows}">
+         
+          
 
     <div class="hero-img">
       <div class="container">
-        <h2>Ethical Hacking Workshop 2.0</h2>
+        <h2>${user.name }</h2>
         <!--<p>Find an event near you and register yourself before the seats are booked.</p>-->
       </div>
       </div>
 
-
+               
       <section id="events">
         <div class="container">
-            <!--<div class="card">
-            <div class="event-content">
-              <h4>Cyber Awareness Programme</h4>
-              <p class="date"> 31st March and 1st April.</p>
-              <h6>Insight on Malware Trends, Identity Theft & Protection, Introduction to Anonymizers, TAIL System, G-Zapper, Password, MITM & Replay Attack Countermeasures, Stats on Financial Loss.Introduction to Viruses, Indications & Recovery, Ransomware, Miners, Worms, Spywares, Trojans, Wiretapping, Lawful Interception, NSA PRISM, Social Engineering, Wireless Attacks, Countermeasures & Defence on Mobile Platforms.Backdooring Mobile & PC platforms, Insights on privacy & information protection on Social Media Platforms such as Facebook, WhatsApp, Instagram, etc.Introduction to Network Infrastructure, Wi-Fi Threat Management, Android Rooting & iOS Jailbreak, Introduction to VM Ware, Kali Linux, Metasploit, OS Breaching, Home Automation & Security Enhancement, Distribution of Freeware used during Events.</h6>
-              <a href="https://goo.gl/forms/TrMshG1DF4HIkrni1" class="call-to-action" >Register Now</a>
-            </div>
-            </div>-->
-
-            <h2>11 Feb 2019 &#8210; 12 Feb 2019 </h2>
+           
+          <sql:setDataSource
+	        var="con"
+	        driver="com.mysql.jdbc.Driver"
+	       url="jdbc:mysql://localhost:3306/cl"
+	        user="root" password=""  /> 
+	    
+	
+	     
+	  
+            <h2>${user.start} to ${user.end} </h2>
                     <!--<h3>9:00 PM &#8210 5:00 PM</h3>-->
                     <br/>
-                    <h3><span class='highlight'>Venue:</span> Dr Triguna Sen auditorium, Jadavpur University</h3> 
+                    <h3><span class='highlight'>Venue:</span> ${user.venue}</h3> 
                     <br/>
                     <h3>Details:</h3>
                     <br/>
                     <p>
-                       Topics to be Covered
-•Vulnerability Analysis
-•Anonymizers
-•Reverse Engineering applications
-•Social Engineering
-•Wireless attacks
-•Tails system, G-Zapper, Firewalls
-•Password Attacks
-•Insight on malware trends
-•Ransomware, worms, Trojans
-•Crypto Miners
-•M.I.T.M attacks 
-•Sniffing, spoofing, XSS and SQL Injection
-•DDOS
-•Android rooting and IOS Jailbreak
-•O.S breaching
-•Dark Web
-
-Date and Course duration
-The workshop will be conducted on 11th and 12th February,2019 from 10:30 a.m to 5 p.m at Dr Triguna Sen auditorium, Jadavpur University.
-
-Fee
-1200/- per participant which includes a hard copy of certificate. 
-
-
-Eligibility 
-The pre-requisite for joining this workshop is zero. Anyone who is interested can register for this workshop. There are limited seats for the workshop.
-
-Workshop Benefits
-•Certification of training to increase weightage of C.V.
-•Gain a first-hand experience in both basic and advanced methods of hacking.
-•Introduction to the latest software.
-•Extreme Countermeasures that are taken to maintain safety.
-•Gain an overview of the different ways of hacking and choose your type.
-
-
-The last date for registration is February 8th, 2019.
-
-Contact
-8777249561
-9804044741
+              ${user.des}
                     </p> 
-                   <small>-Posted by Sagnik on 13 Jan 2019</small>
+                   <small></small>
                    <br/>
                    <br/>
-                   <a href='https://www.payumoney.com/webfronts/#/index/CodingLiquids' class='call-to-action' >Register Now</a><!--<div class="card">
-<div class="event-content">
-  <h4>Cyber Awareness Programme</h4>
-  <p class="date"> 31st March and 1st June.</p>
-  <a href="" class="call-to-action">Register Now/See details</a>
-</div>
-</div>-->
-            
-
+                   <a href='https://www.payumoney.com/webfronts/#/index/CodingLiquids' class='call-to-action' >Register Now</a>
+    
     </div>
+   
   </section>
+   </c:forEach>
   <footer>
     <div class="container-fluid">
       <div class="row">

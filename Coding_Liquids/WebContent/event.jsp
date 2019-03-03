@@ -1,4 +1,9 @@
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+<%@page import="java.util.Base64" import="java.io.UnsupportedEncodingException" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,23 +78,38 @@
 
     <section id="events">
         <div class="c-ontainer">
+        
+          <sql:setDataSource
+	        var="con"
+	        driver="com.mysql.jdbc.Driver"
+	       url="jdbc:mysql://localhost:3306/cl"
+	        user="root" password=""  /> 
+	    
+	
+	     
+	    <sql:query var="listUsers"   dataSource="${con}">
+	        SELECT * FROM event ;
+	    </sql:query>
+	    
+                    <c:forEach var="user"
+                     items="${listUsers.rows}">
             <div class="card">
+            
+            
+       
+           
             <div class="event-content">
-              <h4>Cyber Awareness Programme</h4>
-              <p class="date"> 31st March and 1st April.</p>
-              <h6>Insight on Malware Trends, Identity Theft & Protection, Introduction to Anonymizers, TAIL System, G-Zapper, Password, MITM & Replay Attack Countermeasures, Stats on Financial Loss.Introduction to Viruses, Indications & Recovery, Ransomware, Miners, Worms, Spywares, Trojans, Wiretapping, Lawful Interception, NSA PRISM, Social Engineering, Wireless Attacks, Countermeasures & Defence on Mobile Platforms.Backdooring Mobile & PC platforms, Insights on privacy & information protection on Social Media Platforms such as Facebook, WhatsApp, Instagram, etc.Introduction to Network Infrastructure, Wi-Fi Threat Management, Android Rooting & iOS Jailbreak, Introduction to VM Ware, Kali Linux, Metasploit, OS Breaching, Home Automation & Security Enhancement, Distribution of Freeware used during Events.</h6>
-              <a href="https://goo.gl/forms/TrMshG1DF4HIkrni1" class="call-to-action" >Register Now</a>
+              <h4>${user.name}</h4>
+              <p class="date">${user.start} to ${user.end}</p>
+             <h4>${user.venue}</h4>
+             
+              <a href="details?id=${user.id}" class="call-to-action" >View Details</a>
+                <a href="details?id=${user.id}" class="call-to-action" >Register now</a>
             </div>
             </div>
-            <div class="card">
-            <div class="event-content">
-              <h4>Cyber Awareness Programme</h4>
-              <p class="date"> 31st March and 1st June.</p>
-              <a href="" class="call-to-action">Register Now/See details</a>
-            </div>
-            </div>
-
-
+               
+                </c:forEach>
+                  
         </div>
     </section>
     <footer>
@@ -116,7 +136,6 @@
                         <div class="icon-wrapper"><a href=""> <img src="img/insta.svg" alt="Instagram Icon"></a> </div>
                         <div class="icon-wrapper"><a href=""><img src="img/fb.svg" alt="Facebook Icon"></a></div>
                         <div class="icon-wrapper"><a href=""><img src="img/twit.svg" alt="Twitter Icon"></a></div>
-
                     </div>
                 </div>
                 <p>&copy; Coding Liquids 2018.</p>
