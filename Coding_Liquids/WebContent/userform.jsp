@@ -100,14 +100,12 @@
        
       </div>
       </div>
-      
-  </c:forEach>
-                  
+                 
 
       <section id="contact">
         <div class="container">
 
-            <form method="post" action="" id="contactForm" class="col s6">
+            <form method="post" action="add" id="contactForm" class="col s6">
 
               <div class="row">
                 <div class="col-2">
@@ -125,12 +123,12 @@
               <div class="row">
                 <div class="col-2">
                 <div class="form-element"><label for="name">Year/Class</label>
-                <input type="text" name="name" placeholder="Type Your year/class" required autofocus></div>
+                <input type="text" name="yr" placeholder="Type Your year/class" required autofocus></div>
               </div>
               <div class="col-2">
               <div class="form-element">
                 <label for="name">Department</label>
-                <input type="email" name="email" placeholder="Type Your dept."  required>
+                <input type="dep" name="dep" placeholder="Type Your dept."  required>
               </div>
             </div>
           </div>
@@ -138,12 +136,14 @@
           <div class="row">
               <div class="col-2">
                 <div class="form-element"><label for="name">Institue</label>
-                <input type="text" name="name" placeholder="Type Your Institute" required autofocus></div>
+                <input type="text" name="ins" placeholder="Type Your Institute" required autofocus></div>
               </div>
               <div class="col-2">
               <div class="form-element">
                 <label for="name">Mobile no.</label>
-                <input type="email" name="email" placeholder="Type Your mobile no."  required>
+                <input type="text" name="mob" placeholder="Type Your mobile no."  required>
+              <input type="hidden" name="wrk" value="${user.name }" required>
+             
               </div>
             </div>
           </div>
@@ -161,6 +161,9 @@
 
     </div>
   </section>
+     
+  </c:forEach>
+    
   <footer>
     <div class="container-fluid">
       <div class="row">
