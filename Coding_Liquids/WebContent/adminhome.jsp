@@ -70,12 +70,7 @@
 
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="AdminHome.jsp">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>-
-          </a>
-        </li>
+        
        <!--  <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
@@ -92,13 +87,18 @@
             <a class="dropdown-item" href="blank.html">Blank Page</a>
           </div>
         </li>--> 
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="">
 
             <i class="fas fa-fw fa-table"></i>
             <span>Add Events</span></a>
         </li>
-      
+      <li class="nav-item">
+          <a class="nav-link" href="">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>All registrations</span></a>
+        </li>
       <li class="nav-item">
           <a class="nav-link" href="">
 
@@ -107,17 +107,36 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="">
-
+          	
             <i class="fas fa-fw fa-table"></i>
             <span>All Events</span></a>
         </li>
+
         <li class="nav-item">
           <a class="nav-link" href="">
 
             <i class="fas fa-fw fa-table"></i>
             <span>All users</span></a>
         </li>
-        
+
+         <li class="nav-item">
+          <a class="nav-link" href="">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>Add Vacancy</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>All Vacancy</span></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>Apllications</span></a>
+        </li>
        
       </ul>
 
