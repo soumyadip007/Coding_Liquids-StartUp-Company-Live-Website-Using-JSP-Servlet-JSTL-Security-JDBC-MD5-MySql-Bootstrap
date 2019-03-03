@@ -75,7 +75,7 @@
 <%! String profile;
 	int id;%>
 	<%profile=(String)request.getAttribute("id");
-	out.println(profile);
+//	out.println(profile);
 	%>
           <sql:setDataSource
 	        var="con"
@@ -85,9 +85,6 @@
 	    
 	
 	     
-	    <sql:query var="listUsers"   dataSource="${con}">
-	        SELECT * FROM event where id='<%=profile %>';
-	    </sql:query>
 	        <sql:query var="listUsers"   dataSource="${con}">
 	        SELECT * FROM event where id='<%=profile %>';
 	    </sql:query>
@@ -107,13 +104,7 @@
       <section id="events">
         <div class="container">
            
-          <sql:setDataSource
-	        var="con"
-	        driver="com.mysql.jdbc.Driver"
-	       url="jdbc:mysql://localhost:3306/cl"
-	        user="root" password=""  /> 
-	    
-	
+      
 	     
 	  
             <h2>${user.start} to ${user.end} </h2>
@@ -129,7 +120,7 @@
                    <small></small>
                    <br/>
                    <br/>
-                   <a href='https://www.payumoney.com/webfronts/#/index/CodingLiquids' class='call-to-action' >Register Now</a>
+                    <a href="form?id=${user.id}" class='call-to-action' >Register Now</a>
     
     </div>
    

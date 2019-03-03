@@ -104,7 +104,7 @@
              <h4>${user.venue}</h4>
              
               <a href="details?id=${user.id}" class="call-to-action" >View Details</a>
-                <a href="details?id=${user.id}" class="call-to-action" >Register now</a>
+                <a href="form?id=${user.id}" class="call-to-action" >Register now</a>
             </div>
             </div>
                
