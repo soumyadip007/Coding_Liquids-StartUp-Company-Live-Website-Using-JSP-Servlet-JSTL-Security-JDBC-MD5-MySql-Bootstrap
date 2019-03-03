@@ -38,7 +38,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="AdminHome.jsp">GetSaved.com</a>
+      <a class="navbar-brand mr-1" href="AdminHome.jsp">CodingLiquids.com</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -72,17 +72,56 @@
 
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="Control.jsp">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span>
-          </a>
+      <li class="nav-item ">
+          <a class="nav-link" href="adminhome.jsp">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>Add Events</span></a>
         </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="http://localhost/webapp/user-map.php">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>All Places</span>
-          </a>
+      <li class="nav-item">
+          <a class="nav-link" href="">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>All registrations</span></a>
+        </li>
+      <li class="nav-item">
+          <a class="nav-link" href="">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>Recent Events</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="adminevents.jsp">
+          	
+            <i class="fas fa-fw fa-table"></i>
+            <span>All Events</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>All users</span></a>
+        </li>
+
+         <li class="nav-item">
+          <a class="nav-link" href="adminvacancy.jsp">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>Add Vacancy</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="adminjobs.jsp">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>All Vacancy</span></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>Apllications</span></a>
+        </li>
         </li>
        <!--  <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -110,9 +149,9 @@
           <!-- Breadcrumbs-->
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="AdminHome.jsp">Dashboard</a>
+              <a href="adminevents.jsp">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Overview</li>
+            <li class="breadcrumb-item active">All events</li>
           </ol>
 
           <!-- Icon Cards-->
@@ -136,43 +175,31 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Data Table Example</div>
+             All events</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
-                     	<th>Id</th>
+                     <th>Id</th>
                       <th>Name</th>
-                      <th>type</th>
-                         <th>Age</th>
-                      <th>Blood Group</th>
-                      <th>Phone</th>
-                      <th>Get Location</th>
-                      <th>Police Station</th>
-                       <th>Fire Brigade</th>
-                        <th>Hospital</th>
-                        <th>Time</th>
-                       <th>Lattitude</th>
-                      <th>Longitude</th>
-                      
+                          <th>Start-date</th>
+                         <th>End-date</th>
+                      <th>Venue</th>
+                      <th>Descriptions</th>
+                       <th>Delete</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr> 		
                     	<th>Id</th>
                       <th>Name</th>
-                          <th>type</th>
-                         <th>Age</th>
-                      <th>Blood Group</th>
-                      <th>Phone</th>
-                      <th>Get Location</th>
-                      <th>Police Station</th>
-                       <th>Fire Brigade</th>
-                        <th>Hospital</th>
-                        <th>Time</th>
-                       <th>Lattitude</th>
-                      <th>Longitude</th>
+                          <th>Start-date</th>
+                         <th>End-date</th>
+                      <th>Venue</th>
+                      <th>Descriptions</th>
+                      <th>Delete</th>
+                     
                     </tr>
                   <tbody>
         
@@ -182,13 +209,13 @@
           <sql:setDataSource
 	        var="con"
 	        driver="com.mysql.jdbc.Driver"
-	       url="jdbc:mysql://localhost:3306/hackathon"
+	       url="jdbc:mysql://localhost:3306/cl"
 	        user="root" password=""  /> 
 	    
 	
 	     
 	    <sql:query var="listUsers"   dataSource="${con}">
-	        SELECT * FROM hack ;
+	        SELECT * FROM event ;
 	    </sql:query>
     
     
@@ -199,24 +226,15 @@
                    
                          <td><strong>${user.id}<strong></strong></td>
                       <td>${user.name}</td>
-                         <td>${user.type}</td>
-                      <td>${user.age}</td>
-                      <td>${user.blood}</td>
-                      <td>${user.ph}</td>
-                       
-            <td style="color:blue;"><strong><a href="https://www.google.co.in/maps/@${user.latt},${user.longi},20z">Get Location</a></strong></td>
-                  
-                     <td style="color:red;"><strong><a href=" https://www.google.com/maps/search/police+stations/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:Crimson ;">Police Station</a></strong></td>
-                 
-               <td ><strong ><a href=" https://www.google.com/maps/search/fire+brigade/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:LightSlateGrey;">Fire Brigade</a></strong></td>
-                   
-                     <td><strong><a href=" https://www.google.com/maps/search/hospitals/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:LimeGreen ;">Hospital</a></strong></td>
-                
-                      <td>${user.time}</td>
-                      <td>${user.latt}</td>
-                      
-                        <td>${user.longi}</td>
-                     
+                         <td>${user.start}</td>
+                      <td>${user.end}</td>
+                      <td>${user.venue}</td>
+                      <td>${user.des}</td>
+              <td>
+              <form action="deleteall" method="post">
+               <button type="submit" name="ev" value="${user.id}" class="btn btn-outline-danger">Delete</button>
+		       		  </form></td>
+            
                     </tr>
                   
                 </c:forEach>
@@ -225,7 +243,7 @@
                 </table>
               </div>
             </div>
-            <div class="card-footer small text-muted">GetSaved.com</div>
+            <div class="card-footer small text-muted">Codingliquids.com</div>
           </div>
 
         <!-- /.container-fluid -->
@@ -234,7 +252,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Hackathon UEMK 2019</span>
+              <span>Copyright © https://github.com/soumyadip007</span>
             </div>
           </div>
         </footer>

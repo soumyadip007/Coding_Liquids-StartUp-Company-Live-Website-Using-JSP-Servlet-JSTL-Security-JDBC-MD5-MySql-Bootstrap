@@ -106,7 +106,7 @@
             <span>Recent Events</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="adminevents.jsp">
           	
             <i class="fas fa-fw fa-table"></i>
             <span>All Events</span></a>
@@ -120,13 +120,13 @@
         </li>
 
          <li class="nav-item active">
-          <a class="nav-link" href="adminhome.jsp">
+          <a class="nav-link" href="adminvacancy.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>Add Vacancy</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="adminjobs.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>All Vacancy</span></a>

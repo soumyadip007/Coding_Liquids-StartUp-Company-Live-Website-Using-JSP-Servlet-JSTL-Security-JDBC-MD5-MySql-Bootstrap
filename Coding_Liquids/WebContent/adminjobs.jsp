@@ -2,11 +2,14 @@
     pageEncoding="ISO-8859-1"%>
     
 <%@page import="java.util.Base64" import="java.io.UnsupportedEncodingException" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
 
+	<link rel="icon" type="image/png" href="Error/pic.jpg"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,8 +17,7 @@
     <meta name="author" content="">
 
     <title>Admin page</title>
-   <link rel="shortcut icon" type="image/png" href="static/ax9eqvs2_heart-logo.png"/>
-    
+   
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,8 +31,8 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin.css" rel="stylesheet">
 
-
   </head>
+
 
   <body id="page-top">
 
@@ -70,24 +72,7 @@
 
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
-        
-       <!--  <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="login.html">Login</a>
-            <a class="dropdown-item" href="register.html">Register</a>
-            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="404.html">404 Page</a>
-            <a class="dropdown-item" href="blank.html">Blank Page</a>
-          </div>
-        </li>--> 
-        <li class="nav-item active">
+      <li class="nav-item ">
           <a class="nav-link" href="adminhome.jsp">
 
             <i class="fas fa-fw fa-table"></i>
@@ -105,7 +90,7 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Recent Events</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item ">
           <a class="nav-link" href="adminevents.jsp">
           	
             <i class="fas fa-fw fa-table"></i>
@@ -125,7 +110,7 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Add Vacancy</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="adminjobs.jsp">
 
             <i class="fas fa-fw fa-table"></i>
@@ -137,18 +122,40 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Apllications</span></a>
         </li>
-       
+        </li>
+       <!--  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Pages</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header">Login Screens:</h6>
+            <a class="dropdown-item" href="login.html">Login</a>
+            <a class="dropdown-item" href="register.html">Register</a>
+            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header">Other Pages:</h6>
+            <a class="dropdown-item" href="404.html">404 Page</a>
+            <a class="dropdown-item" href="blank.html">Blank Page</a>
+          </div>
+        </li>--> 
+      
       </ul>
 
       <div id="content-wrapper">
 
         <div class="container-fluid">
 
-         
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="adminevents.jsp">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">All Jobs</li>
+          </ol>
 
           <!-- Icon Cards-->
-       
-           
+         
 
           <!-- Area Chart Example
           <div class="card mb-3">
@@ -162,59 +169,91 @@
           </div> -->
 
           <!-- DataTables Example -->
-        <%!String email=" ";%>
-	<%
-	if(request.getParameter("email")!=null){
-	email=(String) request.getParameter("email");} %>
-	
-	
-	
-	<div>
-		<form action="addevents"  method="post">
-	<table>
-	
-	<tr>
-	
-	</tr>
-	
-	
-	<tr>
-	<td><br><dt class="col-sm-3">Event name</dt></td>
-	<td><br><input type="text" name="name"  class="form-control" required="" placeholder="Enter Event name"></td>
-	</tr>
-	<tr>
-	<td><br><dt class="col-sm-3">Start date:</dt></td>
-	<td><br><input type="date" name="sdate" required="" class="form-control" placeholder="Enter start date"></td>
-	</tr>
-	
-	<tr>
-	
-	<td><br><br><dt class="col-sm-3">End date:</dt></td>
-	<td><br><input type="date" name="edate" required="" class="form-control" placeholder="Enter end date"></td>
-	</tr>
-	
-	
-	<tr>
-	
-	<td><br><br><dt class="col-sm-3">Venue:</dt></td>
-	<td><br><input type="text" name="venue" required="" class="form-control" placeholder="Enter venue"></td>
-	</tr>
-	
-	<tr>
-	
-	<td><br><br><dt class="col-sm-3">Description:</dt></td>
-	<td><br><textarea rows="12" cols="150" name="des" class="form-control" id=  required="" placeholder="Enter description"></textarea><br></td>
-	</tr>
-	<tr>
-	<td colspan="2" align="center"><input class="btn btn-primary btn-lg" type="submit" value="Send"></td>
-	
-	</tr>
-	
-	</table>
-	</form>
-</div>
+        
 
-     
+           
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-table"></i>
+             All Jobs</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                     <th>Id</th>
+                      <th>Totle</th>
+                          <th>Salary</th>
+                       
+                      <th>Description</th>
+ <th>delete</th>
+  
+                      
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr> 		
+                     <th>Id</th>
+                      <th>Totle</th>
+                          <th>Salary</th>
+                       
+                      <th>Description</th>
+   <th>Delete</th>
+  
+                    </tr>
+                  <tbody>
+        
+          
+       
+       
+          <sql:setDataSource
+	        var="con"
+	        driver="com.mysql.jdbc.Driver"
+	       url="jdbc:mysql://localhost:3306/cl"
+	        user="root" password=""  /> 
+	    
+	
+	     
+	    <sql:query var="listUsers"   dataSource="${con}">
+	        SELECT * FROM job ;
+	    </sql:query>
+    
+    
+                    <c:forEach var="user"
+                     items="${listUsers.rows}">
+           
+                    <tr>
+                   
+                         <td><strong>${user.id}<strong></strong></td>
+                      <td>${user.title}</td>
+                         <td>${user.salary}</td>
+                      <td>${user.des}</td>
+                       <td>
+              <form action="deletejob" method="post">
+               <button type="submit" name="ev" value="${user.id}" class="btn btn-outline-danger">Delete</button>
+		       		  </form></td>
+                    </tr>
+                  
+                </c:forEach>
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Codingliquids.com</div>
+          </div>
+
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright © https://github.com/soumyadip007</span>
+            </div>
+          </div>
+        </footer>
+
       </div>
       <!-- /.content-wrapper -->
 
@@ -235,7 +274,7 @@
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">Ã—</span>
+              <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
