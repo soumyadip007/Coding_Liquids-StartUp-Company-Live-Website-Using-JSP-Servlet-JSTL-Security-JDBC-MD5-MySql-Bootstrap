@@ -197,7 +197,7 @@
 	<tr>
 	
 	<td><br><br><dt class="col-sm-3">Venue:</dt></td>
-	<td><br><input type="text" name="edate" required="" class="form-control" placeholder="Enter venue"></td>
+	<td><br><input type="text" name="venue" required="" class="form-control" placeholder="Enter venue"></td>
 	</tr>
 	
 	<tr>

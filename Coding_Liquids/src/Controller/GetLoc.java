@@ -27,31 +27,27 @@ public class GetLoc extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		String name=request.getParameter("name");
-		String mob=request.getParameter("phone");
-		String type=request.getParameter("type");
-		String latt=request.getParameter("latt");
-		String longi=request.getParameter("longi");
-		String age=request.getParameter("age");
-		String blood=request.getParameter("blood");
+		String start=request.getParameter("sdate");
+		String end=request.getParameter("edate");
+		String venue=request.getParameter("venue");
+		String des=request.getParameter("des");
 		try {
 		
 		
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/hackathon","root","");
+		Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/cl","root","");
 		
 	//	Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon","root","THHrio35634");
 		
-		PreparedStatement st=con.prepareStatement("INSERT INTO hack(name,ph,type,latt,longi,age,blood) values(?,?,?,?,?,?,?)");
-		
+		PreparedStatement st=con.prepareStatement("INSERT INTO event(name,start,end,venue,des) values(?,?,?,?,?)");
 		
 			st.setString(1,name);
-			st.setString(2,mob);
-			st.setString(3,type);
-			st.setString(4,latt);
-			st.setString(5,longi);
-			st.setString(6,age);
-			st.setString(7,blood);
+			st.setString(2,start);
+			st.setString(3,end);
+			st.setString(4,venue);
+			st.setString(5,des);
+		
 			int i=st.executeUpdate();
 		
 		} catch (SQLException e) {
@@ -67,13 +63,11 @@ public class GetLoc extends HttpServlet {
 		
 		
 		
-		System.out.println("Latti"+latt);
-		System.out.println(longi);
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		//response.sendRedirect("https://www.latlong.net/c/?lat="+latt+"&long="+longi);
 	//	https://www.google.co.in/maps/@22.5601086,88.4904909,21z
 
-		response.sendRedirect("success.html");
+		response.sendRedirect("adminhome.jsp");
 	}
 
 
