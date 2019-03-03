@@ -170,7 +170,7 @@
 	
 	
 	<div>
-		<form action="JavaEmail"  method="post">
+		<form action="job"  method="post">
 	<table>
 	
 	<tr>
@@ -179,25 +179,15 @@
 	
 	
 	<tr>
-	<td><br><dt class="col-sm-3"></dt></td>
-	<td><br><input type="text" name="name"  class="form-control" required="" placeholder="Enter Event name"></td>
-	</tr>
-	<tr>
-	<td><br><dt class="col-sm-3">Start date:</dt></td>
-	<td><br><input type="date" name="sdate" required="" class="form-control" placeholder="Enter start date"></td>
-	</tr>
-	
-	<tr>
-	
-	<td><br><br><dt class="col-sm-3">End date:</dt></td>
-	<td><br><input type="date" name="edate" required="" class="form-control" placeholder="Enter end date"></td>
+	<td><br><dt class="col-sm-3">Job title:</dt></td>
+	<td><br><input type="text" name="title"  class="form-control" required="" placeholder="Enter job title"></td>
 	</tr>
 	
 	
 	<tr>
 	
-	<td><br><br><dt class="col-sm-3">Venue:</dt></td>
-	<td><br><input type="text" name="edate" required="" class="form-control" placeholder="Enter venue"></td>
+	<td><br><br><dt class="col-sm-3">Salary:</dt></td>
+	<td><br><input type="text" name="salary" required="" class="form-control" placeholder="Enter Salary"></td>
 	</tr>
 	
 	<tr>
