@@ -78,8 +78,8 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Add Events</span></a>
         </li>
-      <li class="nav-item">
-          <a class="nav-link" href="">
+        <li class="nav-item active">
+          <a class="nav-link " href="adminreg.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>All registrations</span></a>
@@ -90,19 +90,13 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Recent Events</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item ">
           <a class="nav-link" href="adminevents.jsp">
           	
             <i class="fas fa-fw fa-table"></i>
             <span>All Events</span></a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="">
-
-            <i class="fas fa-fw fa-table"></i>
-            <span>All users</span></a>
-        </li>
 
          <li class="nav-item">
           <a class="nav-link" href="adminvacancy.jsp">
@@ -151,7 +145,7 @@
             <li class="breadcrumb-item">
               <a href="adminevents.jsp">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">All events</li>
+            <li class="breadcrumb-item active">All registrations</li>
           </ol>
 
           <!-- Icon Cards-->
@@ -175,7 +169,7 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-             All events</div>
+             All registrations</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -183,23 +177,28 @@
                     <tr>
                      <th>Id</th>
                       <th>Name</th>
-                          <th>Start-date</th>
-                         <th>End-date</th>
-                      <th>Venue</th>
-                      <th>Descriptions</th>
-                       <th>Delete</th>
+                          <th>Email</th>
+                          <th>Mobile</th>
+                          <th>Workshop</th>
+                         <th>Year</th>
+                      <th>Dept</th>
+                      <th>Inst</th>
+                      <th>Time</th>
+                      <th>Delete</th>
                     </tr>
                   </thead>
                   <tfoot>
                     <tr> 		
-                    	<th>Id</th>
+                    	  <th>Id</th>
                       <th>Name</th>
-                          <th>Start-date</th>
-                         <th>End-date</th>
-                      <th>Venue</th>
-                      <th>Descriptions</th>
+                          <th>Email</th>
+                          <th>Mobile</th>
+                          <th>Workshop</th>
+                         <th>Year</th>
+                      <th>Dept</th>
+                      <th>Inst</th>
+                      <th>Time</th>
                       <th>Delete</th>
-                     
                     </tr>
                   <tbody>
         
@@ -215,7 +214,7 @@
 	
 	     
 	    <sql:query var="listUsers"   dataSource="${con}">
-	        SELECT * FROM event ;
+	        SELECT * FROM user ;
 	    </sql:query>
     
     
@@ -226,12 +225,16 @@
                    
                          <td><strong>${user.id}<strong></strong></td>
                       <td>${user.name}</td>
-                         <td>${user.start}</td>
-                      <td>${user.end}</td>
-                      <td>${user.venue}</td>
-                      <td>${user.des}</td>
+                         <td>${user.email}</td>
+                      <td>${user.mob}</td>
+                       <td>${user.wrk}</td>
+                      <td>${user.yr}</td>
+                      <td>${user.dep}</td>
+                       <td>${user.ins}</td>
+                       <td>${user.time}</td>
+                     
               <td>
-              <form action="deleteall" method="post">
+              <form action="deleteuser" method="post">
                <button type="submit" name="ev" value="${user.id}" class="btn btn-outline-danger">Delete</button>
 		       		  </form></td>
             
