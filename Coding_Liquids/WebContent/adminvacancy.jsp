@@ -87,7 +87,7 @@
             <a class="dropdown-item" href="blank.html">Blank Page</a>
           </div>
         </li>--> 
-        <li class="nav-item active">
+        <li class="nav-item ">
           <a class="nav-link" href="adminhome.jsp">
 
             <i class="fas fa-fw fa-table"></i>
@@ -119,8 +119,8 @@
             <span>All users</span></a>
         </li>
 
-         <li class="nav-item">
-          <a class="nav-link" href="adminvacancy.jsp">
+         <li class="nav-item active">
+          <a class="nav-link" href="adminhome.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>Add Vacancy</span></a>
@@ -170,7 +170,7 @@
 	
 	
 	<div>
-		<form action="addevents"  method="post">
+		<form action="JavaEmail"  method="post">
 	<table>
 	
 	<tr>
@@ -179,7 +179,7 @@
 	
 	
 	<tr>
-	<td><br><dt class="col-sm-3">Event name</dt></td>
+	<td><br><dt class="col-sm-3"></dt></td>
 	<td><br><input type="text" name="name"  class="form-control" required="" placeholder="Enter Event name"></td>
 	</tr>
 	<tr>
@@ -235,7 +235,7 @@
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">Ã—</span>
+              <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
