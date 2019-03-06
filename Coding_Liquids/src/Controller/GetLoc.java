@@ -31,6 +31,9 @@ public class GetLoc extends HttpServlet {
 		String end=request.getParameter("edate");
 		String venue=request.getParameter("venue");
 		String des=request.getParameter("des");
+
+		String fee=request.getParameter("fee");
+		String link=request.getParameter("link");
 		try {
 		
 		
@@ -40,13 +43,16 @@ public class GetLoc extends HttpServlet {
 		
 	//	Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon","root","THHrio35634");
 		
-		PreparedStatement st=con.prepareStatement("INSERT INTO event(name,start,end,venue,des) values(?,?,?,?,?)");
+		PreparedStatement st=con.prepareStatement("INSERT INTO event(name,start,end,venue,des,fee,link) values(?,?,?,?,?,?,?)");
 		
 			st.setString(1,name);
 			st.setString(2,start);
 			st.setString(3,end);
 			st.setString(4,venue);
 			st.setString(5,des);
+
+			st.setString(6,fee);
+			st.setString(7,link);
 		
 			int i=st.executeUpdate();
 		

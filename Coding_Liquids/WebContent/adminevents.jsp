@@ -185,7 +185,9 @@
                       <th>Name</th>
                           <th>Start-date</th>
                          <th>End-date</th>
+                          <th>Fees</th>
                       <th>Venue</th>
+                      
                       <th>Descriptions</th>
                        <th>Delete</th>
                     </tr>
@@ -196,6 +198,7 @@
                       <th>Name</th>
                           <th>Start-date</th>
                          <th>End-date</th>
+                          <th>Fees</th>
                       <th>Venue</th>
                       <th>Descriptions</th>
                       <th>Delete</th>
@@ -228,6 +231,7 @@
                       <td>${user.name}</td>
                          <td>${user.start}</td>
                       <td>${user.end}</td>
+                        <td>${user.fee}</td>
                       <td>${user.venue}</td>
                       <td>${user.des}</td>
               <td>

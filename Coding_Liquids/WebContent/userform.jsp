@@ -96,6 +96,7 @@
         <h2>${user.name }</h2><br>
          <h3>Venue : ${user.venue }</h3><br>
        <h3>Date : ${user.start } to  ${user.end }</h3>
+        <h5>Fees : ${user.fee } </h5s>
        
        
       </div>
@@ -143,6 +144,7 @@
                 <label for="name">Mobile no.</label>
                 <input type="text" name="mob" placeholder="Type Your mobile no."  required>
               <input type="hidden" name="wrk" value="${user.name }" required>
+              <input type="hidden" name="link" value="${user.link }" required>
              
               </div>
             </div>

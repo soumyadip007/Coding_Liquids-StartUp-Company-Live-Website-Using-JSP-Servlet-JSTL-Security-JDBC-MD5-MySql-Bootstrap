@@ -28,6 +28,7 @@ public class add extends HttpServlet {
 		String des=request.getParameter("ins");
 		String venue1=request.getParameter("mob");
 		String des1=request.getParameter("wrk");
+		String link=request.getParameter("link");
 		try {
 		
 		
@@ -67,7 +68,7 @@ public class add extends HttpServlet {
 		//response.sendRedirect("https://www.latlong.net/c/?lat="+latt+"&long="+longi);
 	//	https://www.google.co.in/maps/@22.5601086,88.4904909,21z
 
-		response.sendRedirect("event.jsp");
+		response.sendRedirect(link);
 	}
 
 }

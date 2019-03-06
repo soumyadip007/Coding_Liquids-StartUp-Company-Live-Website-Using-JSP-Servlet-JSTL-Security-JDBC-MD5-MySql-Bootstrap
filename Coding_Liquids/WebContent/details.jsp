@@ -110,6 +110,8 @@
             <h2>${user.start} to ${user.end} </h2>
                     <!--<h3>9:00 PM &#8210 5:00 PM</h3>-->
                     <br/>
+                     <h3><span class='highlight'>Fee:</span> ${user.fee}</h3> 
+                        <br/>
                     <h3><span class='highlight'>Venue:</span> ${user.venue}</h3> 
                     <br/>
                     <h3>Details:</h3>

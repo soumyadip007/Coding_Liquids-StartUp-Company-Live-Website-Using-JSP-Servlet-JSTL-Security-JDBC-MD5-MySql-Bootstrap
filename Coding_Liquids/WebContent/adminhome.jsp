@@ -202,6 +202,19 @@
 	
 	<tr>
 	
+	<td><br><br><dt class="col-sm-3">Fee:</dt></td>
+	<td><br><input type="text" name="fee" required="" class="form-control" placeholder="Fee"></td>
+	</tr>
+	
+	<tr>
+	
+	<td><br><br><dt class="col-sm-3">Payment link:</dt></td>
+	<td><br><input type="url" name="link" required="" class="form-control" placeholder="Payment link"></td>
+	</tr>
+	
+	
+	<tr>
+	
 	<td><br><br><dt class="col-sm-3">Description:</dt></td>
 	<td><br><textarea rows="12" cols="150" name="des" class="form-control" id=  required="" placeholder="Enter description"></textarea><br></td>
 	</tr>
@@ -272,3 +285,4 @@
   </body>
 
 </html>
+ad
