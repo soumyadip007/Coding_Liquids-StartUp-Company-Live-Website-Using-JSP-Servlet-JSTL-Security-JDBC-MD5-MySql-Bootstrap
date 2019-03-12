@@ -75,16 +75,21 @@
     </div>
 
 
-
-    <section id="events">
-        <div class="c-ontainer">
-        
+ 
+          <%String data,user,pass;%>
+       <%
+       ServletContext ct=getServletContext();
+	  data=ct.getInitParameter("path");
+	  user=ct.getInitParameter("user");
+	  pass=ct.getInitParameter("pass");
+	  %>
+       
           <sql:setDataSource
 	        var="con"
 	        driver="com.mysql.jdbc.Driver"
-	       url="jdbc:mysql://localhost:3306/cl"
-	        user="root" password=""  /> 
-	    
+	       url="<%=data %>"
+	        user="<%=user %>" 
+	        password="<%=pass %>"  /> 
 	
 	     
 	    <sql:query var="listUsers"   dataSource="${con}">
