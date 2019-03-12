@@ -58,6 +58,16 @@ public class GetLoc extends HttpServlet {
 			st.setString(7,link);
 		
 			int i=st.executeUpdate();
+			
+			st=con.prepareStatement("INSERT INTO allevents(name,start,end,venue) values(?,?,?,?)");
+			
+			st.setString(1,name);
+			st.setString(2,start);
+			st.setString(3,end);
+			st.setString(4,venue);
+			
+		
+			st.executeUpdate();
 		
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
