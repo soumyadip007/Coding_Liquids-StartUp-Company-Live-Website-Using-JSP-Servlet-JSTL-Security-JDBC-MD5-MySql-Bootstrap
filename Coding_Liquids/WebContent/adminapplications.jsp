@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
   <head>
 
 	<link rel="icon" type="image/png" href="Error/pic.jpg"/>
@@ -72,7 +73,7 @@
 
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
-      <li class="nav-item ">
+     <li class="nav-item ">
           <a class="nav-link" href="adminhome.jsp">
 
             <i class="fas fa-fw fa-table"></i>
@@ -84,7 +85,7 @@
             <i class="fas fa-fw fa-table"></i>
             <span>All registrations</span></a>
         </li>
-      <li class="nav-item">
+      <li class="nav-item ">
           <a class="nav-link" href="adminevents.jsp">
 
             <i class="fas fa-fw fa-table"></i>
@@ -115,7 +116,6 @@
 
             <i class="fas fa-fw fa-table"></i>
             <span>Apllications</span></a>
-        
         </li>
        <!--  <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -177,29 +177,36 @@
                     <tr>
                      <th>Id</th>
                       <th>Name</th>
-                          <th>Start-date</th>
-                         <th>End-date</th>
-                      <th>Venue</th>
-                      <th>Descriptions</th>
-                       <th>Delete</th>
+                        <th>DOB</th>
+                         <th>Email</th> 
+                         <th>Institution</th>
+                          <th>Skills</th> 
+                          <th>Education</th> 
+                            <th>Role</th> 
+                           <th>Why should we hire you?</th>
+                         <th>Time</th>  
                     </tr>
+                    
                   </thead>
                   <tfoot>
                     <tr> 		
                     	<th>Id</th>
                       <th>Name</th>
-                          <th>Start-date</th>
-                         <th>End-date</th>
-                      <th>Venue</th>
-                      <th>Descriptions</th>
-                      <th>Delete</th>
+                        <th>DOB</th>
+                         <th>Email</th> 
+                         <th>Institution</th>
+                          <th>Skills</th> 
+                          <th>Education</th> 
+                            <th>Role</th> 
+                           <th>Why should we hire you?</th>
+                         <th>Time</th>  
                      
                     </tr>
                   <tbody>
         
           
        
-  
+       
           <%String data,user,pass;%>
        <%
        ServletContext ct=getServletContext();
@@ -217,7 +224,7 @@
 	
 	     
 	    <sql:query var="listUsers"   dataSource="${con}">
-	        SELECT * FROM event ;
+	        SELECT * FROM apply ;
 	    </sql:query>
     
     
@@ -228,15 +235,15 @@
                    
                          <td><strong>${user.id}<strong></strong></td>
                       <td>${user.name}</td>
-                         <td>${user.start}</td>
-                      <td>${user.end}</td>
-                      <td>${user.venue}</td>
-                      <td>${user.des}</td>
-              <td>
-              <form action="deleteall" method="post">
-               <button type="submit" name="ev" value="${user.id}" class="btn btn-outline-danger">Delete</button>
-		       		  </form></td>
-            
+                         <td>${user.dob}</td>
+                      <td>${user.email}</td>
+                      <td>${user.inst}</td>
+                        <td>${user.skills}</td>
+                      <td>${user.edu}</td>
+                      <td>${user.role}</td>
+                       <td>${user.why}</td>
+                         <td>${user.time}</td>
+           
                     </tr>
                   
                 </c:forEach>
