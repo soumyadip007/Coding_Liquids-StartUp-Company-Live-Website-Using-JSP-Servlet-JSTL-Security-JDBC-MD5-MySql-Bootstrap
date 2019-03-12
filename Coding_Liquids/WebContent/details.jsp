@@ -32,36 +32,37 @@
     <!---Fullscreen menu-->
     <div class="menu hidden">
       <div class="container">
-        <h4>MENU</h4>
-        <div class="row">
-          <div class="col-2">
-            <ul>
-              <li><a href="index">Home</a></li>
-              <li><a href="comingsoon">What We Do</a></li>
-          <!--     <li><a href="comingsoon">Portfolio</a></li> -->
+          <h4>MENU</h4>
+                <div class="row">
+                    <div class="col-2">
+                        <ul>
+                          <li><a href="index.html">Home</a></li>
+                            
+                          <li><a href="team.html">Team</a></li>
+                        <!--     <li><a href="comingsoon">Portfolio</a></li> -->
 
-          </ul>
-      </div>
-      <div class="col-2">
-          <ul>
-            <li><a href="team">Team</a></li>
-              <li><a href="events">Events</a></li>
-          <!--    <li><a href="comingsoon">Career</a></li>  -->
-
-            </ul>
-          </div>
-          
+                       <li><a href="careers.jsp">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-2">
+                        <ul>
+                            <li><a href="event.jsp">Workshops/Trainings </a></li>
+                            <li><a href="allevents.jsp">What We Do</a></li>
+                        <li><a href="software.html">Softwares</a></li>
+                      
+                        </ul>
+                    </div>
+                    
                     <ul>
-                      <li><a href="software_repo">Softwares</a></li>
                     </ul>
-          
-        </div>
-        
+                    
+                </div>
+                <!---end of row-->
 
-        <div class="get-quote">
-            <h5>Have a project in mind?</h5>
-            <a href="getquote" class="call-to-action">Lets Talk</a>
-        </div>
+                <div class="get-quote">
+                    <h5>Have a project in mind?</h5>
+                    <a href="project.html" class="call-to-action">Lets Talk</a>
+                </div>
         <div class="social">
             <div class="icon-wrapper"><a href=""> <img src="img/insta.svg" alt="Instagram Icon"></a> </div>
             <div class="icon-wrapper"><a href=""><img src="img/fb.svg" alt="Facebook Icon"></a></div>
