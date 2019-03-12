@@ -87,37 +87,31 @@
             <a class="dropdown-item" href="blank.html">Blank Page</a>
           </div>
         </li>--> 
-        <li class="nav-item active">
+     <li class="nav-item active">
           <a class="nav-link" href="adminhome.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>Add Events</span></a>
         </li>
-      <li class="nav-item">
-          <a class="nav-link" href="">
+        <li class="nav-item ">
+          <a class="nav-link " href="adminreg.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>All registrations</span></a>
         </li>
       <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="adminevents.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>Recent Events</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="adminevents.jsp">
+        <li class="nav-item ">
+          <a class="nav-link" href="adminallevents.jsp">
           	
             <i class="fas fa-fw fa-table"></i>
             <span>All Events</span></a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="">
-
-            <i class="fas fa-fw fa-table"></i>
-            <span>All users</span></a>
-        </li>
 
          <li class="nav-item">
           <a class="nav-link" href="adminvacancy.jsp">
@@ -132,12 +126,11 @@
             <span>All Vacancy</span></a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="adminapplications.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>Apllications</span></a>
         </li>
-       
       </ul>
 
       <div id="content-wrapper">

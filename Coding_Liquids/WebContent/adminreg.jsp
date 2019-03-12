@@ -85,13 +85,13 @@
             <span>All registrations</span></a>
         </li>
       <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="adminevents.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>Recent Events</span></a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="adminevents.jsp">
+          <a class="nav-link" href="adminallevents.jsp">
           	
             <i class="fas fa-fw fa-table"></i>
             <span>All Events</span></a>
@@ -111,12 +111,12 @@
             <span>All Vacancy</span></a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="">
+          <a class="nav-link" href="adminapplications.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>Apllications</span></a>
         </li>
-        </li>
+       
        <!--  <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
@@ -205,12 +205,21 @@
           
        
        
+          <%String data,user,pass;%>
+       <%
+       ServletContext ct=getServletContext();
+	  data=ct.getInitParameter("path");
+	  user=ct.getInitParameter("user");
+	  pass=ct.getInitParameter("pass");
+	  %>
+       
           <sql:setDataSource
 	        var="con"
 	        driver="com.mysql.jdbc.Driver"
-	       url="jdbc:mysql://localhost:3306/cl"
-	        user="root" password=""  /> 
-	    
+	       url="<%=data %>"
+	        user="<%=user %>" 
+	        password="<%=pass %>"  /> 
+	
 	
 	     
 	    <sql:query var="listUsers"   dataSource="${con}">
