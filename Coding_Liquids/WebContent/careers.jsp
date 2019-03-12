@@ -147,7 +147,7 @@
                         <div class="icon-wrapper"><a href=""><img src="img/twit.svg" alt="Twitter Icon"></a></div>
                     </div>
                 </div>
-                <p>&copy; Coding Liquids 2018.</p>
+                <p>&copy; Coding Liquids 2019.</p>
             </div>
         </div>
     </footer>
