@@ -10,6 +10,7 @@
 
   <head>
 
+	<link rel="icon" type="image/png" href="img/coding liquids.png"/>
 	<link rel="icon" type="image/png" href="Error/pic.jpg"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
