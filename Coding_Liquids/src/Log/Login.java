@@ -1,6 +1,9 @@
 package Log;
 
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,10 +24,16 @@ public class Login extends HttpServlet {
    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String a="21232f297a57a5a743894a0e4a801fc3";
 		String user	=(String)request.getParameter("user");
 		String pass	=(String)request.getParameter("pass");
 	
-		if(user.equals("admin") && pass.equals("admin"))	
+		String chk="o";
+	
+			 chk=encryption.pass(pass);
+		
+		//System.out.println(chk);
+		if(user.equals("admin") && chk.equals("21232f297a57a5a743894a0e4a801fc3"))	
 		{
 			//request.setAttribute("user",user);
 			//RequestDispatcher rd=request.getRequestDispatcher("Welcome1.jsp");
