@@ -6,6 +6,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -34,7 +35,9 @@ public class add extends HttpServlet {
 		
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/cl","root","");
+		ServletContext ct=getServletContext();
+		
+		Connection con=(Connection) DriverManager.getConnection(ct.getInitParameter("path"),ct.getInitParameter("user"),ct.getInitParameter("pass"));
 		
 	//	Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon","root","THHrio35634");
 		
