@@ -117,6 +117,12 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Apllications</span></a>
         </li>
+         <li class="nav-item ">
+          <a class="nav-link" href="adminproject.jsp">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>Projects</span></a>
+        </li>
        <!--  <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
@@ -169,7 +175,7 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-             All events</div>
+             All applications</div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

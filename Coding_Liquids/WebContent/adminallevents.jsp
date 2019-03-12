@@ -118,6 +118,12 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Apllications</span></a>
         </li>
+         <li class="nav-item ">
+          <a class="nav-link" href="adminproject.jsp">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>Projects</span></a>
+        </li>
        <!--  <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>

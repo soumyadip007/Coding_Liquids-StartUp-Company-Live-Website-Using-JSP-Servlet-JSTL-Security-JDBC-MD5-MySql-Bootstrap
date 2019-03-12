@@ -117,7 +117,7 @@
             <span>Apllications</span></a>
         </li>
           <li class="nav-item active">
-          <a class="nav-link" href="adminapplications.jsp">
+          <a class="nav-link" href="adminproject.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>Projects</span></a>
