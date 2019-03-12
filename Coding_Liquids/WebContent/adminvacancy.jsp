@@ -36,7 +36,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="AdminHome.jsp">CodingLiquids.com</a>
+      <a class="navbar-brand mr-1" href="adminhome.jsp">CodingLiquids.com</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -93,7 +93,7 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Add Events</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item ">
           <a class="nav-link " href="adminreg.jsp">
 
             <i class="fas fa-fw fa-table"></i>

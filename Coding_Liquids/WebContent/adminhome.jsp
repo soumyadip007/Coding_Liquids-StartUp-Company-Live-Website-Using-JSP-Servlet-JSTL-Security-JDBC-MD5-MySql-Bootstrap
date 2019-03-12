@@ -2,11 +2,14 @@
     pageEncoding="ISO-8859-1"%>
     
 <%@page import="java.util.Base64" import="java.io.UnsupportedEncodingException" %>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
 
+	<link rel="icon" type="image/png" href="Error/pic.jpg"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,8 +17,7 @@
     <meta name="author" content="">
 
     <title>Admin page</title>
-   <link rel="shortcut icon" type="image/png" href="static/ax9eqvs2_heart-logo.png"/>
-    
+   
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,14 +31,14 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin.css" rel="stylesheet">
 
-
   </head>
+
 
   <body id="page-top">
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="AdminHome.jsp">CodingLiquids.com</a>
+      <a class="navbar-brand mr-1" href="adminhome.jsp">CodingLiquids.com</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -70,25 +72,8 @@
 
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
-        
-       <!--  <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <h6 class="dropdown-header">Login Screens:</h6>
-            <a class="dropdown-item" href="login.html">Login</a>
-            <a class="dropdown-item" href="register.html">Register</a>
-            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
-            <div class="dropdown-divider"></div>
-            <h6 class="dropdown-header">Other Pages:</h6>
-            <a class="dropdown-item" href="404.html">404 Page</a>
-            <a class="dropdown-item" href="blank.html">Blank Page</a>
-          </div>
-        </li>--> 
      <li class="nav-item active">
-          <a class="nav-link" href="adminhome.jsp">
+          <a class="nav-link " href="adminhome.jsp">
 
             <i class="fas fa-fw fa-table"></i>
             <span>Add Events</span></a>
@@ -99,7 +84,7 @@
             <i class="fas fa-fw fa-table"></i>
             <span>All registrations</span></a>
         </li>
-      <li class="nav-item">
+      <li class="nav-item ">
           <a class="nav-link" href="adminevents.jsp">
 
             <i class="fas fa-fw fa-table"></i>
@@ -131,17 +116,33 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Apllications</span></a>
         </li>
+       <!--  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Pages</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <h6 class="dropdown-header">Login Screens:</h6>
+            <a class="dropdown-item" href="login.html">Login</a>
+            <a class="dropdown-item" href="register.html">Register</a>
+            <a class="dropdown-item" href="forgot-password.html">Forgot Password</a>
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header">Other Pages:</h6>
+            <a class="dropdown-item" href="404.html">404 Page</a>
+            <a class="dropdown-item" href="blank.html">Blank Page</a>
+          </div>
+        </li>--> 
+      
       </ul>
 
       <div id="content-wrapper">
 
         <div class="container-fluid">
 
+          <!-- Breadcrumbs-->
          
-
           <!-- Icon Cards-->
-       
-           
+         
 
           <!-- Area Chart Example
           <div class="card mb-3">
@@ -155,7 +156,9 @@
           </div> -->
 
           <!-- DataTables Example -->
-        <%!String email=" ";%>
+        
+
+               <%!String email=" ";%>
 	<%
 	if(request.getParameter("email")!=null){
 	email=(String) request.getParameter("email");} %>
@@ -219,8 +222,20 @@
 	</table>
 	</form>
 </div>
+            <div class="card-footer small text-muted">Codingliquids.com</div>
+          </div>
 
-     
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright https://github.com/soumyadip007</span>
+            </div>
+          </div>
+        </footer>
+
       </div>
       <!-- /.content-wrapper -->
 
@@ -278,4 +293,3 @@
   </body>
 
 </html>
-ad
