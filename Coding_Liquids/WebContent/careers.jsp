@@ -67,7 +67,7 @@
 
 
 
-    <div class="hero-img">
+    <div class="hero-img" style="background-image:url('img/software_repo_1600x1000.jpg')">
             <div class="container">
                 <h2>Jobs & Careers </h2>
                 <!--<p>Find an event near you and register yourself before the seats are booked.</p>-->
