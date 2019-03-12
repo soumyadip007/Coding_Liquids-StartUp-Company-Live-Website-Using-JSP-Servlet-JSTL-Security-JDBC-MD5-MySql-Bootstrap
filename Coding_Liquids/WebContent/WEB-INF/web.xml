@@ -13,4 +13,15 @@
     <param-name>pass</param-name>
     <param-value></param-value>
   </context-param>
+  
+  <error-page>
+    <error-code>404</error-code>
+    <location>/index.html</location>
+  </error-page>
+  
+  
+    <error-page>
+    <error-code>400</error-code>
+    <location>/index.html</location>
+  </error-page>
 </web-app>

@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" errorPage="index.jsp"%>
     
 <%@page import="java.util.Base64" import="java.io.UnsupportedEncodingException" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
