@@ -128,20 +128,21 @@
     <footer>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-3">
-                    <ul>
-                        <li><a href="comingsoon.php">Coding Liquids</a></li>
-                        <li><a href="comingsoon.php">Portfolio</a></li>
-                        <li><a href="comingsoon.php">Team</a></li>
-                    </ul>
-                </div>
-                <div class="col-3">
-                    <ul>
-                        <li><a href="">What We Do</a></li>
-                        <li><a href="">Events</a></li>
-                        <li><a href="">Career</a></li>
-                    </ul>
-                </div>
+              <div class="col-3">
+                        <ul>
+                            <li><a href="index.html">Coding Liquids</a></li>
+                            <li><a href="team.html">Team</a></li>
+                             <li><a href="allevents.jsp">What We Do</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <ul>
+                           
+                            <li><a href="event.jsp">Workshop & Training</a></li>
+                             <li><a href="allevents.jsp">All Previous Events</a></li>
+                            <li><a href="careers.jsp">Careers</a></li>
+                        </ul>
+                    </div>
                 <div class="col-3">
                     <p>Address: Newtown, Kolkata-700157</p>
                     <p>+91 8017742989</p>
