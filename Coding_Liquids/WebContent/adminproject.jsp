@@ -33,7 +33,11 @@
 
   </head>
 
-
+<%
+  response.setHeader("Cache-Control","no-cache,no-store,must-revaildate");
+	if(session.getAttribute("username")==null)
+	{response.sendRedirect("Login.jsp");}
+	%>
   <body id="page-top">
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
