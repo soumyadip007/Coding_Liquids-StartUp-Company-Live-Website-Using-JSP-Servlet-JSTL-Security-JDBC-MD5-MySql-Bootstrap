@@ -66,7 +66,7 @@ public class encryption {
 	        {
 	            e.printStackTrace();
 	        }
-	      //  System.out.println(generatedPassword);
+	        System.out.println(generatedPassword);
 	        return "no";
 	    }
 	}

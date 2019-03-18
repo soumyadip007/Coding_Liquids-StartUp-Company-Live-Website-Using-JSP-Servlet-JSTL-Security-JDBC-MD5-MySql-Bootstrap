@@ -36,8 +36,7 @@ public class project extends HttpServlet {
 				|| start.contains("select") || start.contains("*") ||  start.contains("'") || start.contains("insert") || start.contains("=")  || start.contains("delete")
 				|| end.contains("select") || end.contains("*") ||  end.contains("'") || end.contains("insert") || end.contains("=") || end.contains("delete")
 				|| venue.contains("select") || venue.contains("*") ||  venue.contains("'") || venue.contains("insert") || venue.contains("=") || venue.contains("delete")
-				|| venue1.contains("select") || venue1.contains("*") ||  venue1.contains("'") || venue1.contains("insert") || venue1.contains("=") || venue1.contains("delete")
-		){
+				|| venue1.contains("select") || venue1.contains("*") ||  venue1.contains("'") || venue1.contains("insert") || venue1.contains("=") || venue1.contains("delete")){
 
 			response.sendRedirect("error.html");
 		}
