@@ -212,8 +212,8 @@
           <sql:setDataSource
 	        var="con"
 	        driver="com.mysql.jdbc.Driver"
-	       url="jdbc:mysql://localhost:3306/cl"
-	        user="root" password=""  /> 
+	       url="jdbc:mysql://localhost:3306/codingli_data"
+	        user="codingli_data" password="codingliquids"  /> 
 	    
 	
 	     
