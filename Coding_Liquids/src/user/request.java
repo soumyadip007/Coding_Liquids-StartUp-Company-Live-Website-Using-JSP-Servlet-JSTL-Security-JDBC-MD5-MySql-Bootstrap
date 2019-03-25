@@ -24,18 +24,14 @@ public class request extends HttpServlet {
 
 		String name=request.getParameter("name");
 		String start=request.getParameter("email");
-		String end=request.getParameter("service");
-		String venue=request.getParameter("low");
-		String des=request.getParameter("up");
-		String venue1=request.getParameter("reff");
-		String des1=request.getParameter("msg");
+		String end=request.getParameter("wd");
+		String venue=request.getParameter("wv");
+		String des=request.getParameter("wn");
 
 		if(name.contains("select") || name.contains("*") ||  name.contains("'") || name.contains("insert") || name.contains("=") || name.contains("delete")
 				|| start.contains("select") || start.contains("*") ||  start.contains("'") || start.contains("insert") || start.contains("=")  || start.contains("delete")
-				|| end.contains("select") || end.contains("*") ||  end.contains("'") || end.contains("insert") || end.contains("=") || end.contains("delete")
-				|| venue.contains("select") || venue.contains("*") ||  venue.contains("'") || venue.contains("insert") || venue.contains("=") || venue.contains("delete")
-				|| venue1.contains("select") || venue1.contains("*") ||  venue1.contains("'") || venue1.contains("insert") || venue1.contains("=") || venue1.contains("delete")){
-
+				|| end.contains("select") || end.contains("*") ||  end.contains("'") || end.contains("insert") || end.contains("=") || end.contains("delete"))
+		{
 			response.sendRedirect("error.html");
 		}
 		else {
@@ -51,15 +47,14 @@ public class request extends HttpServlet {
 		
 	//	Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon","root","THHrio35634");
 		
-		PreparedStatement st=con.prepareStatement("INSERT INTO project(name,email,service,low,up,reff,msg) values(?,?,?,?,?,?,?)");
+		PreparedStatement st=con.prepareStatement("INSERT INTO project(name,email,wd,wv,wn) values(?,?,?,?,?)");
 		
 			st.setString(1,name);
 			st.setString(2,start);
 			st.setString(3,end);
 			st.setString(4,venue);
 			st.setString(5,des);
-			st.setString(6,venue1);
-			st.setString(7,des1);
+			
 		
 			int i=st.executeUpdate();
 		
