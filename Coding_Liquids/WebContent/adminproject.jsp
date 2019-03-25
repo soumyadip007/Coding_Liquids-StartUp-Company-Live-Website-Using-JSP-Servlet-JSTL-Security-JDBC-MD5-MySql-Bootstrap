@@ -142,7 +142,12 @@
             <a class="dropdown-item" href="blank.html">Blank Page</a>
           </div>
         </li>--> 
-      
+      <li class="nav-item ">
+          <a class="nav-link" href="adminreq.jsp">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>Requests</span></a>
+        </li>
       </ul>
 
       <div id="content-wrapper">

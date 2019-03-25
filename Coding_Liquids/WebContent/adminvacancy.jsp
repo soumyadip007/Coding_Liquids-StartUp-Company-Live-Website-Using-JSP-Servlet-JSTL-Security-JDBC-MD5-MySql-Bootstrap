@@ -142,6 +142,12 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Projects</span></a>
         </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="adminreq.jsp">
+
+            <i class="fas fa-fw fa-table"></i>
+            <span>Requests</span></a>
+        </li>
       </ul>
 
       <div id="content-wrapper">
