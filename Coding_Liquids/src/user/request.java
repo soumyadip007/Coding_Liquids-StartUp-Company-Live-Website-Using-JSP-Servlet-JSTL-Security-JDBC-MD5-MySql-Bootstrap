@@ -47,7 +47,7 @@ public class request extends HttpServlet {
 		
 	//	Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon","root","THHrio35634");
 		
-		PreparedStatement st=con.prepareStatement("INSERT INTO project(name,email,wd,wv,wn) values(?,?,?,?,?)");
+		PreparedStatement st=con.prepareStatement("INSERT INTO req(name,email,wd,wv,wn) values(?,?,?,?,?)");
 		
 			st.setString(1,name);
 			st.setString(2,start);
