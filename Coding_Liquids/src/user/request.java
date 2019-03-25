@@ -24,9 +24,9 @@ public class request extends HttpServlet {
 
 		String name=request.getParameter("name");
 		String start=request.getParameter("email");
-		String end=request.getParameter("wd");
+		String end=request.getParameter("wn");
 		String venue=request.getParameter("wv");
-		String des=request.getParameter("wn");
+		String des=request.getParameter("wd");
 
 		if(name.contains("select") || name.contains("*") ||  name.contains("'") || name.contains("insert") || name.contains("=") || name.contains("delete")
 				|| start.contains("select") || start.contains("*") ||  start.contains("'") || start.contains("insert") || start.contains("=")  || start.contains("delete")
