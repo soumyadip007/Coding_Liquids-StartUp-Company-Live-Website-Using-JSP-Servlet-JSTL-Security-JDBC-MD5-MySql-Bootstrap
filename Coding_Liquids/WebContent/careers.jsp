@@ -118,10 +118,10 @@
        
            
             <div class="event-content">
-              <h4>${user.title}</h4>
+              <h4><b>${user.title}</b></h4>
              
-             <h4>${user.salary}</h4>
-             <h4>Price: ${user.des}</h4>
+             <p> ${user.des}></p>
+             <h4>Salary: ${user.salary}</h4>
              
              <a href="apply.html" class="call-to-action" >Apply Now</a>
             </div>
