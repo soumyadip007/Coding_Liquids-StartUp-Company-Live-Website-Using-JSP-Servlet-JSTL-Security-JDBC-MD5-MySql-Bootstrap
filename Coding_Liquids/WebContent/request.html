@@ -1,27 +1,34 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 
 	<link rel="icon" type="image/png" href="img/coding liquids.png"/>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Cache-control" content="no-cache">
-    <title>Software | Coding Liquids</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/grid.css">
-    <link rel="stylesheet" href="css/main.css">
+  <title>Project | Coding Liquids</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/main.css">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
-   <!---content to be displayed after loading-->
-    <div class="wrapper">
-        <div class="container-fluid"><div class="hamburger"><span>menu </span><span class="close">close</span> <i class="material-icons close">close</i><i class="material-icons">menu</i></div></div>
-        <!---Fullscreen menu-->
-        <div class="menu hidden">
-            <div class="container">
-               <h4>MENU</h4>
+  <!---content to be displayed after loading-->
+  <div class="wrapper">
+    <div class="container-fluid">
+      <div class="hamburger">
+        <span>menu </span>
+        <span class="close">close</span>
+        <i class="material-icons close">close</i>
+        <i class="material-icons">menu</i>
+      </div>
+    </div>
+    <!---Fullscreen menu-->
+    <div class="menu hidden">
+      <div class="container">
+          <h4>MENU</h4>
                 <div class="row">
                     <div class="col-2">
                         <ul>
@@ -52,72 +59,77 @@
                     <h5>Have a project in mind?</h5>
                     <a href="project.html" class="call-to-action">Lets Talk</a>
                 </div>
-                <div class="social">
-                    <div class="icon-wrapper"><a href=""> <img src="img/insta.svg" alt="Instagram Icon"></a> </div>
-                    <div class="icon-wrapper"><a href=""><img src="img/fb.svg" alt="Facebook Icon"></a></div>
-                    <div class="icon-wrapper"><a href=""><img src="img/twit.svg" alt="Twitter Icon"></a></div>
-                </div>
+        <div class="social">
+            <div class="icon-wrapper"><a href=""> <img src="img/insta.svg" alt="Instagram Icon"></a> </div>
+            <div class="icon-wrapper"><a href=""><img src="img/fb.svg" alt="Facebook Icon"></a></div>
+            <div class="icon-wrapper"><a href=""><img src="img/twit.svg" alt="Twitter Icon"></a></div>
+        </div>
 
+      </div>
+    </div>
+
+
+    <div class="hero-img"  >
+      <div class="container">
+        <h2>Request for a workshop</h2>
+       
+      </div>
+      </div>
+
+
+      <section id="contact">
+        <div class="container">
+
+            <form method="post" action="req" id="contactForm" class="col s6">
+
+              <div class="row">
+                <div class="col-2">
+                <div class="form-element"><label for="name">Your Name</label>
+                <input type="text" name="name" placeholder="Type Your name" required autofocus></div>
+              </div>
+              <div class="col-2">
+              <div class="form-element">
+                <label for="name">Your Email</label>
+                <input type="email" name="email" placeholder="Type Your email"  required>
+              </div>
             </div>
-        </div>
-
-
-        <div class="hero-img" style="background-image:url('img/software_repo_1600x1000.jpg')">
-           <div class="container">
-             <h2>Request for a Workshop</h2>
-             <p style="margin-top:10px;">Your suggestion matters for us.</p>
-           </div>
-        </div>
-
-
-        <section id="software-zone" style="margin: 40px 20px;">
-          
-          <br/>
-          <div class="row">
-           <div class='col-3'>
-                              <h5 style='text-align:center;'>BetternetForWindows.exe</h5>
-                              <p style='text-align:center;padding-bottom:1.5rem;'><a href='img/BetternetForWindows.exe'>Download</a></p>
-
-                          </div>             
-              <!--<div class="col-3">
-                  <h5 style="text-align:center;">GNU Sim 8085</h5>
-                  <p style="text-align:center;padding-bottom:1.5rem;"><a href="">Download</a></p>
-                  
-              </div>
-              <div class="col-3">
-                  <h5 style="text-align:center;">GNU Sim 8085</h5>
-                  <p style="text-align:center;padding-bottom:1.5rem;"><a href="">Download</a></p>
-                  
-              </div>
-               <div class="col-3">
-                  <h5 style="text-align:center;">GNU Sim 8085</h5>
-                  <p style="text-align:center;padding-bottom:1.5rem;"><a href="">Download</a></p>
-                  
-              </div>
-              <div class="col-3">
-                  <h5 style="text-align:center;">GNU Sim 8085</h5>
-                  <p style="text-align:center;padding-bottom:1.5rem;"><a href="">Download</a></p>
-                  
-              </div>
-              <div class="col-3">
-                  <h5 style="text-align:center;">GNU Sim 8085</h5>
-                  <p style="text-align:center;padding-bottom:1.5rem;"><a href="">Download</a></p>
-                  
-              </div>
-               <div class="col-3">
-                  <h5 style="text-align:center;">GNU Sim 8085</h5>
-                  <p style="text-align:center;padding-bottom:1.5rem;"><a href="">Download</a></p>
-                  
-              </div>-->
           </div>
           
-        </section>
+         
+          <div class="row">
+              <div class="form-element">
+                  <label for="ref">Workshop name</label>
+                  <input type="text" name="wn" placeholder="Enter workshop name" title="Where did you hear about us?">
+              </div>
+          </div>
+         
+          <div class="row">
+              <div class="form-element">
+                  <label for="ref">Workshop venue</label>
+                  <input type="text" name="wv" placeholder="Enter workshop vanue" title="Where did you hear about us?">
+              </div>
+          </div>
+           <div class="row">
+              <div class="form-element">
+                  <label for="ref">Workshop date</label>
+                  <input type="text" name="wd" placeholder="Enter workshop date" title="Where did you hear about us?">
+              </div>
+          </div>
 
+                
 
-        <footer>
-            <div class="container-fluid">
-                <div class="row">
-                   <div class="col-3">
+          <div class="row">
+            <input type="submit" name="action" id="submit" onclick="showText()">
+          </div>
+
+        </form>
+
+    </div>
+  </section>
+  <footer>
+    <div class="container-fluid">
+      <div class="row">
+      <div class="col-3">
                         <ul>
                             <li><a href="index.html">Coding Liquids</a></li>
                             <li><a href="team.html">Team</a></li>
@@ -132,24 +144,37 @@
                             <li><a href="careers.jsp">Careers</a></li>
                         </ul>
                     </div>
-                    <div class="col-3">
-                        <p>Address: Newtown, Kolkata-700157</p>
-                        <p>+91 8017742989</p>
-                        <div class="social">
-                            <div class="icon-wrapper"><a href=""> <img src="img/insta.svg" alt="Instagram Icon"></a> </div>
-                            <div class="icon-wrapper"><a href=""><img src="img/fb.svg" alt="Facebook Icon"></a></div>
-                            <div class="icon-wrapper"><a href=""><img src="img/twit.svg" alt="Twitter Icon"></a></div>
-
-                        </div>
-                    </div>
-                    <p>&copy; Coding Liquids 2019.</p>
-                </div>
+        <div class="col-3">
+          <p>Address: Newtown, Kolkata-700157</p>
+          <p>+91 8017742989</p>
+            <div class="social">
+                <div class="icon-wrapper"><a href=""> <img src="img/insta.svg" alt="Instagram Icon"></a> </div>
+                <div class="icon-wrapper"><a href=""><img src="img/fb.svg" alt="Facebook Icon"></a></div>
+                <div class="icon-wrapper"><a href=""><img src="img/twit.svg" alt="Twitter Icon"></a></div>
             </div>
-        </footer>
-
+        </div>
+        <p>&copy; Coding Liquids 2019.</p>
+      </div>
     </div>
+  </footer>
+
+</div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/app.js"></script>
+<script type="text/javascript">
+  $(window).scroll(function(){
+    var $wScroll = $(this).scrollTop();
+    var $heroHeight = $(window).height();
+    $heroHeight = $heroHeight - ($heroHeight/5);
+      if(($wScroll > ($heroHeight - 20))) {
+      $('.hamburger span, .hamburger .material-icons').css({"color": "#000"});
+    }
+    else{
+      $('.hamburger span, .hamburger .material-icons').css({"color": "#fff"});
+    }
+    $('.hamburger .close').css({"color": "#fff"});
+  });
+</script>
 </body>
 </html>
