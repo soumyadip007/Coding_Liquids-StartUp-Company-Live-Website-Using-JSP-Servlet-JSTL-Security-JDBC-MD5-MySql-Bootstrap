@@ -116,7 +116,7 @@
               <h4>${user.name}</h4>
               <p class="date">${user.start} to ${user.end}</p>
              <h4>${user.venue}</h4>
-             <h4>Price: ${user.fee}</h4>
+             <h4>Fee: ${user.fee}</h4>
              
               <a href="details?id=${user.id}" class="call-to-action" >View Details</a>
                 <a href="form?id=${user.id}" class="call-to-action" >Register now</a>
