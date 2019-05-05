@@ -30,10 +30,10 @@ public class Login extends HttpServlet {
 	
 		String chk="o";
 	
-			 chk=encryption.pass(pass);
+			// chk=encryption.pass(pass);
 		
 		//System.out.println(chk);
-		if(user.equals("admin") && chk.equals("21232f297a57a5a743894a0e4a801fc3"))	
+		if(user.equals("sexyass") && pass.equals("iamthebest"))	
 		{
 			//request.setAttribute("user",user);
 			//RequestDispatcher rd=request.getRequestDispatcher("Welcome1.jsp");
