@@ -80,11 +80,11 @@ public class add extends HttpServlet {
 		
 		
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	//	response.getWriter().append("Served at: ").append(request.getContextPath());
 		//response.sendRedirect("https://www.latlong.net/c/?lat="+latt+"&long="+longi);
 	//	https://www.google.co.in/maps/@22.5601086,88.4904909,21z
 
-		response.sendRedirect(link);
+		response.sendRedirect("index.html");
 	}
 }
 }
