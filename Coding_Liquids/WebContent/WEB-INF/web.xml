@@ -3,15 +3,15 @@
   <display-name>Coding_Liquids</display-name>
   <context-param>
     <param-name>path</param-name>
-    <param-value>jdbc:mysql://localhost:3306/cl</param-value>
+    <param-value>jdbc:mysql://localhost:3306/codingli_data</param-value>
   </context-param>
   <context-param>
     <param-name>user</param-name>
-    <param-value>root</param-value>
+    <param-value>codingli_data</param-value>
   </context-param>
   <context-param>
     <param-name>pass</param-name>
-    <param-value></param-value>
+    <param-value>codingliquids</param-value>
   </context-param>
   <error-page>
     <error-code>404</error-code>
