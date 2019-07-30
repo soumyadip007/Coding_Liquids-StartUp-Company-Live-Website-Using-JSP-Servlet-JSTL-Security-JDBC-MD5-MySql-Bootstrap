@@ -114,7 +114,7 @@
            
             <div class="event-content">
               <h4>${user.name}</h4>
-              <p class="date">${user.start} to ${user.end}</p>
+              <p class="date">${user.start} and ${user.end}</p>
              <h4>${user.venue}</h4>
              <h4>Fee: ${user.fee}</h4>
              
