@@ -119,8 +119,8 @@
              <h4>Fee: ${user.fee}</h4>
              
               <a href="details?id=${user.id}" class="call-to-action" >View Details</a>
-                 <!-- <a href="${user.link}" class='call-to-action' >Register Now</a> - -->  
-       <a href="form?id=${user.id}" class='call-to-action' >Register Now</a>
+              <a href="${user.link}" class='call-to-action' >Register Now</a> 
+       <!--    <a href="form?id=${user.id}" class='call-to-action' >Register Now</a>- -->  
             </div>
             </div>
                
