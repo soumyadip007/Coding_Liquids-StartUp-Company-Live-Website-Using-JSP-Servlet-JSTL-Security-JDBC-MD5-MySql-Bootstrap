@@ -10,10 +10,6 @@ Website for a Startup company named Codingliquids. A enterprise website with Adm
 
 # Image
 
-
-# Image
-
-<img src="./Coding_Liquids/img/index.png" >
 <img src="./Coding_Liquids/img/1.png" >
 <img src="./Coding_Liquids/img/2.png" >
 <img src="./Coding_Liquids/img/3.png" >
