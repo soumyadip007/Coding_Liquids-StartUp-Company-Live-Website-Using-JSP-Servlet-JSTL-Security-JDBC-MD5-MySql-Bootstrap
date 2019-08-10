@@ -14,7 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class deletejob
+ * 
+ * @author Soumyadip Chowdhury
+ *
  */
 @WebServlet("/deletejob")
 public class deletejob extends HttpServlet {

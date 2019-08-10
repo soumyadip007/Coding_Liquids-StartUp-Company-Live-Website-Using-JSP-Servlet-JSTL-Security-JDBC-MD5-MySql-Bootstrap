@@ -14,7 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class deleteall
+ * 
+ * @author Soumyadip Chowdhury
+ *
  */
 @WebServlet("/deleteall")
 public class deleteall extends HttpServlet {

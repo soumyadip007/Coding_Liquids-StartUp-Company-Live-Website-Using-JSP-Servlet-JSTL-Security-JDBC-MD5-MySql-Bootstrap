@@ -10,6 +10,11 @@ import javax.crypto.spec.PBEKeySpec;
 import java.math.BigInteger;
 import java.security.*;
 
+/**
+ * 
+ * @author Soumyadip Chowdhury
+ *
+ */
 public class encryption {
 
 	public static void main(String[] args)

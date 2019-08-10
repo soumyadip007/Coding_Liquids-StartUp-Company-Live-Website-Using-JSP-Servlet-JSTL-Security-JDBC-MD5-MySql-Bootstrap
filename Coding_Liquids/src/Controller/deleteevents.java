@@ -14,7 +14,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class deleteevents
+ * 
+ * @author Soumyadip Chowdhury
+ *
  */
 @WebServlet("/deleteevents")
 public class deleteevents extends HttpServlet {

@@ -13,8 +13,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
- * Servlet implementation class job
+ * 
+ * @author Soumyadip Chowdhury
+ *
  */
 @WebServlet("/job")
 public class job extends HttpServlet {
