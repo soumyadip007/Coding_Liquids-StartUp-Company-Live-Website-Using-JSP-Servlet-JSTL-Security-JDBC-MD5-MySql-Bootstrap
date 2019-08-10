@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class details
+ * 
+ * @author Soumyadip Chowdhury
+ *
  */
 @WebServlet("/details")
 public class details extends HttpServlet {
